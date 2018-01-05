@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Treatwell Application Code
  * 
@@ -6,7 +8,21 @@
  */
 public class Treatwell {
 	public static void main(String [] args){
-		drawBox(4, 7);
+		int h = 0;
+		int w = 0;
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("Enter height");
+		h = scn.nextInt();
+		System.out.println("Enter width);");
+		w = scn.nextInt();
+		
+		drawBox(h, w);
+		System.out.println("Press 0 to exit");
+		int close = scn.nextInt();
+		if(close == 0){
+			System.exit(0);
+		}
 	}
 	
 	/**
